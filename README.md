@@ -1,4 +1,4 @@
-<img src="Excel.svg.svg">
+<img src="Excel.svg">
 
 ## PDF 下载：
 
