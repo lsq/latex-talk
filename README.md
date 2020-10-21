@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="Excel.svg" alt="latex-talk" width=75%>
-</p>
+![](Excel.svg)
 
 ## PDF 下载：
 
