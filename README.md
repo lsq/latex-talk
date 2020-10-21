@@ -1,12 +1,10 @@
-<p align="center">
-  <img src="Excel.svg" alt="latex-talk" width=75%>
-</p>
+![示例](C:\Users\pc\github\latex-talk\Excel.png)
 
 ## PDF 下载：
 
-- [放映版](https://github.com/lsq/latex-talk/releases/download/2020-10-21/Excel.pdf)
-- [阅读版](https://github.com/lsq/latex-talk/releases/download/2020-10-21/Excel-handout.pdf)
+- [放映版](https://github.com/lsq/latex-talk/releases/download/v1.0/Excel.pdf)
+- [阅读版](https://github.com/lsq/latex-talk/releases/download/v1.0/Excel-handout.pdf)
 
 -----
 
-Copyright (C) 2013&ndash;2020 by Xiangdong Zeng.
+Copyright (C) 2013&ndash;2020 by lsq.
