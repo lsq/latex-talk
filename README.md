@@ -7,4 +7,4 @@
 
 -----
 
-Copyright (C) 2013&ndash;2020 by Xiangdong Zeng.
+Copyright (C) 2013&ndash;2020 by lsq.
