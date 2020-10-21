@@ -36,9 +36,6 @@
 ```
 3. 刷新dns缓存
 命令行执行: `ipconfig /flushdns     #清除DNS缓存内容。`
-=======
-![示例](https://github.com/lsq/latex-talk/raw/main/Excel.png)
->>>>>>> 712938a01972755c0c99e3b9bbe913518053b629
 
 ### linux 环境
 1. 文件位置：/etc/hosts
