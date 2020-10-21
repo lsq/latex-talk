@@ -1,4 +1,4 @@
-![](Excel.svg)
+![](https://github.com/lsq/latex-talk/blob/main/Excel.svg)
 
 ## PDF 下载：
 
