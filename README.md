@@ -3,7 +3,7 @@
 ### windows 环境
 1. hosts文件位置：C:\windows\system32\drivers\etc\hosts
 2. 添加以下内容
-```
+```shell
 # GitHub Start 
 140.82.113.3      github.com
 140.82.114.20     gist.github.com
@@ -35,7 +35,7 @@
 # GitHub END
 ```
 3. 刷新dns缓存
-命令行执行: `ipconfig /flushdns     #清除DNS缓存内容。`
+命令行执行: `ipconfig /flushdns`
 
 ### linux 环境
 1. 文件位置：/etc/hosts
