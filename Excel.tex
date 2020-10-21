@@ -1,0 +1,241 @@
+\XeTeXgenerateactualtext=1
+\ifdefined\HANDOUT
+  \documentclass[fontset=none,handout]{ctexbeamer}
+\else
+  \documentclass[fontset=none]{ctexbeamer}
+\fi
+
+\usepackage{%
+  array,
+  bookmark,
+  fontawesome5,
+  hologo,
+  listings,
+  multicol,
+  qrcode,
+  ragged2e,
+  siunitx,
+  colortbl,
+  wallpaper,
+  unicode-math}
+
+\makeatletter
+
+\@namedef{ver@beamerfontthememetropolis.sty}{9999/99/99}
+
+% Beamer theme
+\usetheme{Xiaoshan}
+\usefonttheme{serif,professionalfonts}
+
+% Beamer settings
+\metroset{progressbar=none}
+\setbeamerfont{title}{size=\huge, series=\bfseries}
+\setbeamerfont*{subtitle}{size=\large, shape=\itshape}
+\setbeamerfont{section title}{size=\Large, series=\bfseries}
+\setbeamerfont{frametitle}{size=\large, series=\bfseries}
+\setbeamerfont{caption}{size=\footnotesize, series=\bfseries}
+\setbeamerfont{footnote}{size=\tiny}
+\setbeamerfont{alerted text}{series=\bfseries}
+\addtobeamertemplate{institute}{\raggedleft}{}
+\setbeamertemplate{title}{%
+  \raggedleft
+  \linespread{1.0}%
+  \inserttitle
+  \hspace*{1.2cm}\par
+  \vspace*{0.5em}}
+\setbeamertemplate{subtitle}{%
+  \raggedleft
+  \insertsubtitle
+  \hspace*{1.2cm}\par
+  \vspace*{0.5em}}
+\setbeamertemplate{title page}{%
+	\raggedright
+	\includegraphics[height=1cm]{figures/blue.png}
+  \begin{minipage}[b]{\textwidth}  	
+    \usebeamertemplate*{title graphic}\vfill
+    \usebeamertemplate*{title}
+    \usebeamertemplate*{subtitle}
+    \usebeamertemplate*{title separator}
+    \usebeamertemplate*{author}
+    \usebeamertemplate*{date}
+    \usebeamertemplate*{institute}
+    \vfill
+  \end{minipage}}
+\setbeamertemplate{frame numbering}{\zhnumber[style=Financial]{\insertframenumber}}
+\setbeamertemplate{itemize/enumerate subbody begin}{\footnotesize}
+\setbeamertemplate{caption}{\parbox{\textwidth}{\centering\insertcaption}\par}
+\setbeamertemplate{bibliography item}[text]
+
+% Colors
+\colorlet{keyword}{松花绿}
+\colorlet{comment}{漆黑!50}
+\colorlet{texcs}{酡红}
+\colorlet{emph1}{靛蓝}
+\colorlet{emph2}{琥珀}
+\colorlet{inline}{玄色}
+\definecolor{Ocean}{RGB}{129,194,234}
+\definecolor{Ocean}{RGB}{129,194,234}
+
+% Fonts
+\setmainfont{LibertinusSerif}[
+  Extension      = .otf,
+  UprightFont    = *-Regular,
+  BoldFont       = *-Bold,
+  ItalicFont     = *-Italic,
+  BoldItalicFont = *-BoldItalic,
+  Scale          = 1.1]
+\setmonofont{Iosevka}[Scale=0.96]
+\setmathfont{LibertinusMath-Regular.otf}
+\setCJKmainfont{Source Han Serif SC}[
+  UprightFont     = * SemiBold,
+  BoldFont        = * Heavy,
+  ItalicFont      = * SemiBold,
+  BoldItalicFont  = * SemiBold,
+  RawFeature      = +fwid]
+\setCJKmonofont{Sarasa Mono SC}
+
+\newfontfamily\EBGaramond{EBGaramond}[
+  Extension      = .otf,
+  UprightFont    = *-Regular,
+  BoldFont       = *-Bold,
+  ItalicFont     = *-Italic,
+  BoldItalicFont = *-BoldItalic]
+\newfontfamily\LatinRomanV{lmroman5-regular.otf}
+\newfontfamily\LatinRomanVI{lmroman6-regular.otf}
+\newfontfamily\LatinRomanVII{lmroman7-regular.otf}
+\newfontfamily\LatinRomanVIII{lmroman8-regular.otf}
+\newfontfamily\LatinRomanIX{lmroman9-regular.otf}
+\newfontfamily\LatinRomanX{lmroman10-regular.otf}
+\newfontfamily\LatinRomanXII{lmroman12-regular.otf}
+\newfontfamily\LatinRomanXVII{lmroman17-regular.otf}
+\newfontfamily\LibertinusKey{LibertinusKeyboard-Regular.otf}
+
+\newfontfamily\Avenir{Avenir Next}
+\newfontfamily\Courier{Courier}
+\newfontfamily\Helvetica{Helvetica Neue Light}
+\newfontfamily\Menlo{Menlo}
+\newfontfamily\NotoArabic{Noto Naskh Arabic}[Script=Arabic]
+\newfontfamily\NotoDevanagari{Noto Serif Devanagari}
+\newfontfamily\NotoEgyptian{Noto Sans Egyptian Hieroglyphs}
+\newfontfamily\Optima{Optima}
+\newfontfamily\SourceHanSerifNoCJK{Source Han Serif SC Heavy}
+\newCJKfontfamily\FangSong{FZFangSong-Z02}
+\newCJKfontfamily\HeiTi{FZHei-B01}
+\newCJKfontfamily\KaiTi{FZKai-Z03}
+\newCJKfontfamily\SourceHanSerif{Source Han Serif SC SemiBold}
+\newCJKfontfamily\WaWa{Wawati SC}
+\newfontfamily\SimHei{SimHei.ttf}[Path=./fonts/, AutoFakeBold=4, AutoFakeSlant]
+\newfontfamily\TimesNewRoman{Times New Roman}
+\newfontfamily\xkcd{xkcd-script.ttf}[Path=./fonts/, Ligatures=TeX]
+% \newfontfamily\EmojiOne{EmojiOneColor.otf}[Path=./fonts/, BoldFont=*]
+
+% PDF bookmark
+\apptocmd{\beamer@@frametitle}{%
+  \only<1>{\expandafter\ifnum\insertcontinuationcount<2\relax
+    \bookmark[page=\the\c@page,level=4]{#1}\fi}}{}{}
+
+% Code listings
+\lstdefinestyle{style@latex}{
+  language     = [latex]TeX,
+  alsoletter   = {*},
+  basewidth    = 0.54em,
+  basicstyle   = \small\ttfamily,
+  keywordstyle = \bfseries\color{keyword},
+  commentstyle = \itshape\color{comment},
+  texcsstyle   = *\color{texcs},
+  emphstyle    = [1]\itshape\color{emph1},
+  emphstyle    = [2]\color{emph2}
+}
+\lstdefinestyle{style@inline}{
+  basicstyle   = \ttfamily\color{inline},
+  keepspaces   = true
+}
+\lstnewenvironment{texcode}[1][]{\lstset{
+  style        = style@latex,
+  gobble       = 2,
+  morekeywords = {\documentclass,\usepackage,\begin,\end},#1}}{}
+\lstMakeShortInline[style=style@inline]|
+
+% Hack
+% Use small caps for LaTeX symbol
+\DeclareRobustCommand{\LaTeX}{%
+  L\kern-.3em%
+  \raisebox{.2em}{\textsc{a}}\kern-.14em%
+  \TeX}
+% Compatibility with unicode-math
+\DeclareRobustCommand{\LaTeXe}{%
+  \LaTeX\kern.15em2%
+  \hbox{%
+    \if b\expandafter\@car\f@series\@nil
+      $_{\textstyle\symbf{\varepsilon}}$%
+    \else
+      $_{\textstyle\varepsilon}$%
+    \fi}}
+% PoZheHao, see https://github.com/CTeX-org/ctex-kit/issues/382
+\ExplSyntaxOn
+\xeCJK_new_class:n { PoZheHao }
+\__xeCJK_save_CJK_class:n { PoZheHao }
+\xeCJK_declare_char_class:nn { PoZheHao } { "2014 }
+\seq_map_inline:Nn \g__xeCJK_class_seq
+  {
+    \str_if_eq:nnF {#1} { PoZheHao }
+      {
+        \xeCJK_copy_inter_class_toks:nnnn { PoZheHao } {#1} { FullRight } {#1}
+        \xeCJK_copy_inter_class_toks:nnnn {#1} { PoZheHao } {#1} { FullRight }
+      }
+  }
+\ExplSyntaxOff
+
+% Macros
+\newcommand\link[1]{\href{#1}{\faLink}}
+\newcommand\CASE[1]{{\addfontfeatures{Letters=Uppercase}#1}}
+\newcommand\jatext[1]{{\addCJKfontfeatures{Language=Japanese}#1}}
+\newcommand\zhparen[1]{（\raisebox{0.1ex}{#1}）}
+\newcommand\enparen[1]{\CASE{(}#1\CASE{)}}
+\newcommand\pkg[1]{\texttt{#1}}
+\newcommand\usv[1]{\texttt{U+#1}}
+\newcommand\kbd[1]{{\LibertinusKey#1}}
+\DeclareRobustCommand{\nonumberfootnote}[2][]{%
+  \let\thefootnote\relax
+  \footnotetext#1{#2}}
+\renewcommand*\footnoterule{}
+
+\newcommand\XeTeX{\hologo{XeTeX}}
+\newcommand\pdfTeX{\hologo{pdfTeX}}
+\newcommand\LuaTeX{\hologo{LuaTeX}}
+\newcommand\XeLaTeX{\hologo{Xe}\kern-.13em\LaTeX{}}
+\newcommand\pdfLaTeX{pdf\LaTeX{}}
+\newcommand\LuaLaTeX{Lua\LaTeX{}}
+\newcommand\BibTeX{\hologo{BibTeX}}
+
+\makeatother
+
+% Information
+\title{Excel \& VBA操作培训}
+%\title{Excel \& VBA入门培训}
+\subtitle{Useful Excel Tips}
+\author{刘军晓}
+\institute{深圳市AA有限公司\quad 财务部}
+\date{\zhtoday}
+\titlegraphic{%
+%  \includegraphics[height=1cm]{figures/badam.png}
+  \vspace{3.4cm}
+  \qrcode[hyperlink, height=1.6cm]{https://github.com/lsq/latex-talk}}
+
+\begin{document}
+
+\maketitle
+%{\usebackgroundtemplate{%
+%		\includegraphics[width=\paperwidth,height=\paperheight]{figures/bg.pdf}} 
+\input{include/introduction.tex}
+%\input{include/install.tex}
+%\input{include/start.tex}
+%\input{include/content.tex}
+%\input{include/math.tex}
+%\input{include/typography.tex}
+%\input{include/advanced.tex}
+\input{include/function-PivotTable.tex}
+\input{include/advanced.tex}
+\input{include/about.tex}
+
+\end{document}

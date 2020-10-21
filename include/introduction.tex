@@ -1,0 +1,243 @@
+\begin{frame}[standout]
+  \large\xkcd
+  ``Your paper makes no goddamn sense, \\
+  but it's the most beautiful thing \\
+  \XeTeXglyph\XeTeXglyphindex"I_hyphen_p_r_o_n_o_u_n"\relax\
+  have ever laid eyes on.''
+
+  \small
+  \hfill From r/ProgrammerHumor
+  \href{https://www.reddit.com/r/ProgrammerHumor/comments/2jf7yl}{\faRedditAlien}
+\end{frame}
+
+\section{介绍}
+
+\begin{frame}{常用表格处理软件}
+	\begin{columns}
+		\begin{column}{\textwidth}
+			  \begin{figure}
+			    \centering
+			    \includegraphics[height=0.8cm]{figures/wps.jpeg}
+			    \includegraphics[height=0.8cm]{figures/excel.jpeg}			    
+			    \includegraphics[height=0.8cm]{figures/libreoffice.jpeg}
+			    \includegraphics[height=0.8cm]{figures/PowerBI.jpeg}
+%			    \caption{高德纳（Donald~E. Knuth） \\ \TeX}
+			  \end{figure}
+		\end{column}
+	\end{columns}
+	\begin{columns}
+		\begin{column}{\textwidth}
+			\begin{figure}
+				\centering				
+				\includegraphics[height=0.8cm]{figures/R.jpg}
+				\includegraphics[height=0.8cm]{figures/Python.jpeg}
+				\includegraphics[height=0.8cm]{figures/Access.jpeg}
+				\includegraphics[height=0.8cm]{figures/SQLite.jpeg}
+				\includegraphics[height=0.8cm]{figures/MySQL.png}
+				\includegraphics[height=1.1cm]{figures/Postgresql.jpg}
+				%			    \caption{高德纳（Donald~E. Knuth） \\ \TeX}
+			\end{figure}
+		\end{column}
+	\end{columns}
+	\begin{itemize}
+		\item 数据处理软件
+			\begin{itemize}
+				\item 电子表格处理软件：Office EXCEL、国产WPS、开源Libreoffice等
+				\item 报表软件：Finereport、PowerBI、tabeau等
+				\item 数据库：Access、SQLite、MySQL、Postgresql、Sqersver
+				\item 统计分析及数据可视化: R、Python、 SPSS、 Eviews
+			\end{itemize}
+		\item WPS与EXCEL对比
+		
+			\begin{tabular}{!{\color{cyan}\vrule width 1pt}l!{\color{cyan}\vrule width 1pt}l!{\color{cyan}\vrule width 1pt}}
+				\noalign{{\color{cyan}\hrule height 1pt}}
+				WPS & EXCEL\\\noalign{{\color{cyan}\hrule height 1pt}}
+				操作人性化& 性能强大、面对大量数据计算\\\noalign{{\color{cyan}\hrule height 1pt}}
+				模板丰富 & 可扩展性强（数据库、VBA、Python）\\\noalign{{\color{cyan}\hrule height 1pt}}
+		%		\noalign{{\color{cyan}\hrule height 1pt}}
+			\end{tabular}
+	\end{itemize}
+%\begin{columns}
+%\begin{column}{0.45\textwidth}
+%  \begin{figure}
+%    \centering
+%    \includegraphics[height=3.2cm]{figures/Knuth-vivian20181019E.jpg}
+%    \caption{高德纳（Donald~E. Knuth） \\ \TeX}
+%  \end{figure}
+%\end{column}
+%\begin{column}{0.45\textwidth}
+%  \begin{figure}
+%    \centering
+%    \includegraphics[height=3.2cm]{figures/lamport-2018.jpg}
+%    \caption{Leslie Lamport \\ \LaTeX}
+%  \end{figure}
+%\end{column}
+%\end{columns}
+%\nonumberfootnote{图片来源：
+%  \link{https://www-cs-faculty.stanford.edu/~knuth/graphics.html}
+%  \link{https://aperiodical.com/2018/09/hlf-blogs-leslie-lamport-thinks-your-code-is-bad}}
+\end{frame}
+
+\begin{frame}{常用快捷键}
+\pause
+\begin{itemize}
+  \item<+-> \kbd{Ctrl} + \kbd{D}/ \kbd{Ctrl} + \kbd{1} / \kbd{Ctrl} + \kbd{9}/\kbd{0}
+
+  \begin{itemize}
+    \item  「 快速填充/格式设置/隐藏列（行）」
+  \end{itemize}
+
+  \item<+-> \kbd{Ctrl} + 箭头(\kbd{Home}/\kbd{End})/\kbd{Ctrl} + \kbd{Shift} + 箭头/\kbd{Ctrl} + \kbd{Shift} + L
+
+  \begin{itemize}
+    \item 「	移动/区块选择/快速筛选」 			
+  \end{itemize}
+
+  \item<+-> \kbd{Shift} + \kbd{F8}/ \kbd{Ctrl} + \kbd{Enter}
+
+  \begin{itemize}
+    \item 「多选模式/批量写入相同内容」
+  \end{itemize}
+
+  \item<+-> \kbd{Alt} + \kbd{F8}/ \kbd{Alt} + \kbd{F11}
+	
+	\begin{itemize}		
+		\item 「宏运行/打开VBA编辑器」
+	\end{itemize}
+
+  \item<+-> \kbd{Alt} + \kbd{D} + \kbd{O}
+	
+	\begin{itemize}
+		\item 「 表单选择	」
+	\end{itemize}
+  \item<+-> 更多快捷键请百度或者访问Microsoft 网站查找
+
+  \begin{itemize}
+    \item {\tiny
+    	https://support.microsoft.com/zh-cn/office/excel-中的键盘快捷方式-1798d9d5-842a-42b8-9c99-9b7213f0040f\#bkmk\_freqwin
+       \link{https://support.microsoft.com/zh-cn/office/excel-中的键盘快捷方式-1798d9d5-842a-42b8-9c99-9b7213f0040f\#picktab=windows}}
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{常用操作}
+\begin{itemize}
+	\item<+-> 相对引用、绝对引用、混合引用
+		\begin{itemize}
+			\item 相对引用\\
+			Excel中默认的引用为相对引用。相对引用反映了该单元格地址与引用单元格之间的相对位置关系，当将引用该地址的公式或函数复制到其他单元格时，这种相对位置关系也随之被复制。比如：|A1|\\
+			%例如，现在单元格C7有公式“=A5+B6”，当将此公式复制到D7和C8时，单元格D7的公式此时变化为“=B5+C6;单元例如，现在单元格C7有公式“=A5+B6”，当将此公式复制到D7和C8时，单元格D7的公式此时变化为“-B5+C6;单元格C8的公式这时变化为“=A6+B7”。
+			
+			\item 绝对引用\\
+			绝对地址是指某一单元格在工作表中的绝对位置。绝对引用要在行号和列标前加一个\$符号，如∶|$A$1+$B$2|等。
+			\item 混合引用\\
+			比如|=$A5+B$6|
+		\end{itemize}
+	\item<+-> 格式刷
+		\begin{itemize}
+			\item 双击“格式刷”可以多次应用相同样式
+		\end{itemize}
+	\item<+-> 条件格式
+	\begin{itemize}
+		\item 显示重复项
+		\item 自定义条件格式（比如公式）
+	\end{itemize}
+	\item<+-> 定义名称
+	\begin{itemize}
+		\item 快捷键\kbd{Ctrl} + \kbd{F3}
+%		\begin{figure}
+%			\centering				
+%			\includegraphics[height=1.1cm]{figures/define-name.png}
+%			%			    \caption{高德纳（Donald~E. Knuth） \\ \TeX}
+%		\end{figure}
+	\end{itemize}
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}{常用操作}
+	\begin{itemize}
+		\item<+-> 定位操作
+		
+		\begin{itemize}
+			\item 快捷键\kbd{Ctrl} + \kbd{G}
+			\item 定位常量、空单元格、对象等
+		\end{itemize}
+		%	\item<+-> 高级筛选
+		
+		\item<+-> 显示公式/公式求值/计算工作表
+		
+		\begin{itemize}
+			\item 快捷键\kbd{F9}、\kbd{Shift} + \kbd{F9}
+		\end{itemize}
+	
+		\item<+-> 分列
+		
+		\begin{itemize}
+			\item 主要用于清洗不规则数据
+		\end{itemize}
+		\item<+-> \alert{高级筛选、数据有效性(用的少)}
+	\end{itemize}
+\end{frame}
+
+
+%\begin{columns}
+%\begin{column}{0.48\textwidth}
+%  \begin{texcode}[basicstyle=\tiny\ttfamily, moretexcs={\maketitle},
+%    emph={[1]equation,itemize,document},emph={[2]article,amsmath,graphicx}]
+%  \documentclass{article}
+%  \usepackage{amsmath,graphicx}
+%  \title{Normal distribution}
+%  \author{Wikipedia, the free encyclopedia}
+%
+%  \begin{document}
+%  \maketitle
+%  \section{Introduction}
+%  % 省略一些内容……
+%  The probability density of the normal
+%  distribution is
+%  \begin{equation}
+%    f(x|\mu, \sigma)
+%    = \frac{1}{\sqrt{2\pi\sigma^2}}
+%      e^{-\frac{(x-\mu)^2}{2\sigma^2}}
+%  \end{equation}
+%  where
+%  \begin{itemize}
+%    \item<+->$\mu$ is the mean of the distribution
+%    \item<+->$\sigma$ is the standard deviation
+%  \end{itemize}
+%  \end{document}
+%  \end{texcode}
+%\end{column}
+%\pause
+%\begin{column}{0.48\textwidth}
+%  \begin{figure}
+%    \centering
+%    \vspace{-0.8cm}
+%    \includegraphics[width=\textwidth]{example/normal-dist.pdf}
+%  \end{figure}
+%\end{column}
+%\end{columns}
+%\nonumberfootnote{来源：Wikipedia \link{https://en.wikipedia.org/wiki/Normal_distribution}}
+%\end{frame}
+
+%\begin{frame}{基本原则}
+%\begin{itemize}
+%  \item<+-> 排版 vs 文字处理
+%
+%    \begin{itemize}
+%      \item<+->《别把 \LaTeX{} 当 Word 用》
+%    \end{itemize}
+%
+%  \item<+-> 遵循业\zhparen{xué}界\zhparen{xiào}规范
+%
+%    \begin{itemize}
+%      \item<+->《管教务处 \textit{or} 研究生院 \textit{or} 物理系叫爸爸》
+%    \end{itemize}
+%
+%  \item<+-> 追求良好的阅读体验\zhparen{readability}
+%  \item<+-> 内容与格式分离
+%  \item<+-> \alert{内容永远比格式重要！}
+%\end{itemize}
+%\end{frame}
