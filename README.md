@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ![示例](https://github.com/lsq/latex-talk/raw/main/Excel.svg)
 ## 无法显示预览图片
 ### windows 环境
