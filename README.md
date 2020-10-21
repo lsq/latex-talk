@@ -1,4 +1,4 @@
-![示例](./Excel.png)
+![示例](https://github.com/lsq/latex-talk/raw/main/Excel.png)
 
 
 ## PDF 下载：
